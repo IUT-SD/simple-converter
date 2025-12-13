@@ -6,12 +6,16 @@ def km_to_meters(km):
 def kg_to_g(kg):
     return kg * 1000
 
+def m_to_com(m):
+    return m*100
+
 
 def show_menu():
     print("Convertisseur d'unités")
     print("1. Kilomètres en Mètres")
     print("2. Kilogrammes en Grammes")
-    print("3. Quitter") 
+    print("3. Mètres en centimètres")
+    print("4. Quitter") 
 
 def main():
     while True:
@@ -27,6 +31,10 @@ def main():
             grams = kg_to_g(kg)
             print(f"{kg} kilogrammes = {grams} grammes\n")
         elif choice == '3':
+            m = float(input("Entrez la taille en mètres: "))
+            cm = m_to_com(m)
+            print(f"{m} mètres = {cm} centimètres\n")
+        elif choice == '4':
             print("Fin du programme.")
             break
         else:
