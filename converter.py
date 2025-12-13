@@ -9,6 +9,8 @@ def m_to_cm(m):
 def kg_to_g(kg):
     return kg * 1000
 
+def m_to_cm(m): 
+    return m*100
 
 def show_menu():
     print("Convertisseur d'unités")
