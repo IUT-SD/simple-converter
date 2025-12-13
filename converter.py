@@ -3,6 +3,9 @@
 def km_to_meters(km):
     return km * 1000
 
+def meters_to_centimeters(m):
+    return m * 100
+
 def kg_to_g(kg):
     return kg * 1000
 
@@ -12,11 +15,12 @@ def show_menu():
     print("1. Kilomètres en Mètres")
     print("2. Kilogrammes en Grammes")
     print("3. Quitter") 
+    print("4. Mètres en Centimètre")
 
 def main():
     while True:
         show_menu()
-        choice = input("Choisissez une option (1-3): ")
+        choice = input("Choisissez une option (1-4): ")
         
         if choice == '1':
             km = float(input("Entrez la distance en kilomètres: "))
@@ -29,6 +33,10 @@ def main():
         elif choice == '3':
             print("Fin du programme.")
             break
+        elif choice == '4':
+            meters = float(input("Entrez la distance en mètres: "))
+            centi = meters_to_centimeters(meters)
+            print(f"{meters} mètre = {centi} centimètre\n")
         else:
             print("Option invalide, veuillez réessayer.\n")
 if __name__ == "__main__":
